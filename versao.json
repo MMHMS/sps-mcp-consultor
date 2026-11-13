@@ -1,0 +1,274 @@
+{
+  "produto": "SPS MCP Consultor",
+  "versao": "0.4.40",
+  "data": "2026-11-13",
+  "novidades": [
+    "Responder chamado corrigido: a resposta agora vai pela chamada certa do portal (o envio anterior voltava HTTP 404 e nada era publicado)"
+  ],
+  "historico": [
+    {
+      "versao": "0.4.39",
+      "data": "2026-11-13",
+      "novidades": [
+        "Novo: responder chamado existente na Invent e na Skill pelo chat (chamado_responder), com texto e anexos colados no chat ou arquivos e pastas do computador",
+        "sempre com a prévia e o seu sim, e confere no portal se a resposta chegou"
+      ]
+    },
+    {
+      "versao": "0.4.38",
+      "data": "2026-11-13",
+      "novidades": [
+        "Sessão dos portais (Invent, Skill) cai menos: com a sessão do configurador ou de outro chat aberta, o chat usa essa em vez de pedir o código de novo",
+        "Enquanto o chat está aberto, a sessão é mantida viva (o portal derrubava depois de um tempo parado)"
+      ]
+    },
+    {
+      "versao": "0.4.37",
+      "data": "2026-11-13",
+      "novidades": [
+        "Buscar todas as Service Layers pelo banco: com só o servidor do banco preenchido, o botão lê no banco as Service Layers cadastradas no SLD, o Controller de cada uma e acha o endereço do SLD, sem login",
+        "Controller no SQL Server (porta 40005, na máquina da Service Layer) funciona",
+        "Campo Endereço do SLD",
+        "Corrigido: testar ou salvar apagava o campo Controller de cada linha"
+      ]
+    },
+    {
+      "versao": "0.4.36",
+      "data": "2026-11-13",
+      "novidades": [
+        "Controller/SLD em outra máquina que a da Service Layer (caso da ISQ): o nome digitado na linha da Service Layer é usado direto quando a rede o conhece",
+        "Mensagem de erro aponta o campo certo (Controller, na linha da Service Layer)"
+      ]
+    },
+    {
+      "versao": "0.4.35",
+      "data": "2026-11-13",
+      "novidades": [
+        "Configurador abre com as pastas fechadas",
+        "a pasta que você abriu continua aberta ao salvar, e a da base salva abre sozinha"
+      ]
+    },
+    {
+      "versao": "0.4.34",
+      "data": "2026-11-13",
+      "novidades": [
+        "SLD (Control Center) pelo chat: sld_support_user mostra o Support User de cada empresa com o tempo que resta",
+        "sld_ativar_support_user pergunta em qual empresa (ou todas), mostra o cartão e ativa depois do seu sim",
+        "Novo flag Ações no SLD por base (desligado por padrão)",
+        "Testar tudo agora testa o acesso do B1SiteUser (Controller no HANA, SLD no SQL Server)",
+        "support_user_status usa o SLD quando o login do Controller está cadastrado"
+      ]
+    },
+    {
+      "versao": "0.4.33",
+      "data": "2026-11-13",
+      "novidades": [
+        "Proteção contra bloqueio do B1SiteUser: se o login no Controller ou no SLD for recusado, o conector não tenta de novo por 30 minutos (ou até a senha ser trocada no configurador)"
+      ]
+    },
+    {
+      "versao": "0.4.32",
+      "data": "2026-11-13",
+      "novidades": [
+        "Antes de criar ou atualizar pela Service Layer, o conector lê as regras do SAP do cliente (campos obrigatórios, filial, valores válidos e as travas da TransactionNotification daquele documento) e devolve tudo o que falta de uma vez, sem tentativa e erro",
+        "Nova ferramenta sl_regras: a IA consulta as regras antes de montar o documento",
+        "Nova ferramenta support_user_status: confere se o Support User do SAP está ativo em uma base ou em todas"
+      ]
+    },
+    {
+      "versao": "0.4.31",
+      "data": "2026-11-12",
+      "novidades": [
+        "Nome do servidor para o Controller em cada linha da Service Layer, com o link Descobrir os nomes do Controller (lê do certificado, com a porta do Controller)",
+        "Certificado genérico (*.empresa.com.br) não é usado como nome: a linha fica para você digitar",
+        "Script tirar-do-publico.ps1 corrigido (parava no passo 1)"
+      ]
+    },
+    {
+      "versao": "0.4.30",
+      "data": "2026-11-12",
+      "novidades": [
+        "Controller: entra pelo nome real do servidor (lido do certificado), mesmo quando a Service Layer está cadastrada por um apelido de DNS ou pelo IP",
+        "testado no QA da Farina"
+      ]
+    },
+    {
+      "versao": "0.4.29",
+      "data": "2026-11-12",
+      "novidades": [
+        "Controller com a Service Layer cadastrada pelo IP: o conector descobre o nome do servidor pelo certificado e entra no Controller pelo nome, conectando no mesmo IP (funciona sem DNS)",
+        "Campo de reserva Nome do servidor (Controller), se o certificado não trouxer o nome"
+      ]
+    },
+    {
+      "versao": "0.4.28",
+      "data": "2026-11-12",
+      "novidades": [
+        "Service Layer Controller: cadastre o login do Controller (SLD) no cartão da Service Layer",
+        "O Claude lê o status da Service Layer no Controller (memória, CPU, nós, versão e erros), só leitura",
+        "Novo flag Reiniciar (Controller): o Claude reinicia a Service Layer pelo chat, mostrando antes o status e só depois do seu sim",
+        "com várias Service Layers, reinicia só a que você indicar"
+      ]
+    },
+    {
+      "versao": "0.4.27",
+      "data": "2026-11-12",
+      "novidades": [
+        "Service Layer com três opções separadas por base: Criar (POST), Atualizar (PATCH) e Apagar (DELETE), todas desligadas por padrão e sempre com a sua confirmação no chat",
+        "Novo: apagar registro pelo chat (sl_apagar), mostrando antes o registro como está hoje",
+        "Quem já tinha a gravação ligada continua com Criar e Atualizar ligados"
+      ]
+    },
+    {
+      "versao": "0.4.26",
+      "data": "2026-11-11",
+      "novidades": [
+        "Campo de pasta mais claro: Pasta na lista (ex.: nome do cliente) agrupa as bases na lista da esquerda e não muda a conexão",
+        "Bases sem pasta aparecem em Sem pasta"
+      ]
+    },
+    {
+      "versao": "0.4.25",
+      "data": "2026-11-11",
+      "novidades": [
+        "Atualização sem abrir chat novo: os chats abertos passam para a versão nova sozinhos, mesmo quando um pedido ficou parado ou foi cancelado",
+        "Tela de atualização com o texto certo sobre os chats abertos"
+      ]
+    },
+    {
+      "versao": "0.4.24",
+      "data": "2026-11-11",
+      "novidades": [
+        "Abrir chamado na Invent e na Skill voltou a funcionar no chat do Claude Desktop: a confirmação agora é o seu sim no chat, depois da prévia (a janela extra voltava como cancelada)"
+      ]
+    },
+    {
+      "versao": "0.4.23",
+      "data": "2026-11-11",
+      "novidades": [
+        "Senhas e campos colados não levam mais espaço, quebra de linha ou caractere invisível sobrando no começo ou no fim",
+        "Senhas já salvas com espaço no fim são corrigidas sozinhas",
+        "Chave do autenticador dos portais aceita colada com espaços"
+      ]
+    },
+    {
+      "versao": "0.4.22",
+      "data": "2026-11-11",
+      "novidades": [
+        "Conectar no Claude agora avisa onde funciona: no app Claude Desktop e no Claude Code da máquina",
+        "no navegador (claude.ai) e no celular não"
+      ]
+    },
+    {
+      "versao": "0.4.21",
+      "data": "2026-11-11",
+      "novidades": [
+        "Conectar no Claude mais simples: um clique em Conectar agora liga no chat do Claude Desktop e no Claude Code",
+        "Texto da opção Permitir gravar pelo chat não sai mais cortado"
+      ]
+    },
+    {
+      "versao": "0.4.20",
+      "data": "2026-11-11",
+      "novidades": [
+        "Gravar no SAP pela Service Layer pelo chat, sempre com a sua confirmação: inserir (POST) em qualquer rotina, inclusive fiscal, ações (cancelar nota) e serviços",
+        "Atualizar registro (PATCH): muda só os campos enviados e o resumo mostra o valor atual e o novo",
+        "Resumo e resultado em tabelas, com nomes de cliente, itens, filial e depósito",
+        "Recusa da SAP explicada em português",
+        "Novo botão Conectar no Claude no configurador: copia um prompt pronto ou liga direto no Claude Desktop",
+        "Liga por base: Service Layer > Permitir gravar pelo chat"
+      ]
+    },
+    {
+      "versao": "0.4.19",
+      "data": "2026-11-11",
+      "novidades": [
+        "Inserir pela Service Layer (POST) pelo chat: qualquer rotina, inclusive fiscal, ações (cancelar nota) e serviços",
+        "Sempre com a sua confirmação no chat (resumo + código)",
+        "Liga por base no configurador: Service Layer > Permitir inserir documentos (POST) pelo chat",
+        "PATCH, DELETE, login e contas de usuário continuam bloqueados"
+      ]
+    },
+    {
+      "versao": "0.4.18",
+      "data": "2026-11-11",
+      "novidades": [
+        "Portais mais rápidos: o conector já aquece a Invent e a Skill ao abrir o chat",
+        "Correção do erro 500 na Skill em buscas com mais de uma palavra",
+        "A base de conhecimento não trava mais a resposta (limite de 12 s)",
+        "O Claude faz uma busca só, no portal do fabricante do add-on"
+      ]
+    },
+    {
+      "versao": "0.4.17",
+      "data": "2026-11-10",
+      "novidades": [
+        "Busca nos portais mais rápida (de 40 s para 14 a 20 s) e com os artigos de volta",
+        "Repetir a mesma busca na conversa responde na hora",
+        "Correção: preparar chamado com os campos adicionais do portal (Invent) funcionava com erro"
+      ]
+    },
+    {
+      "versao": "0.4.16",
+      "data": "2026-11-10",
+      "novidades": [
+        "O Claude abre chamado na Invent e no Grupo Skill: monta a prévia completa, você confere e corrige, e antes de enviar aparece uma janela na sua tela para você confirmar",
+        "Prints colados no chat vão no chamado (no texto ou em anexo)",
+        "Depois de abrir, o Claude confere no portal se o chamado e o texto chegaram"
+      ]
+    },
+    {
+      "versao": "0.4.15",
+      "data": "2026-11-10",
+      "novidades": [
+        "Senhas mais claras: quando já está salva, aparece o selo verde Senha salva com o botão Trocar",
+        "ao trocar, dá para desistir com Manter a salva"
+      ]
+    },
+    {
+      "versao": "0.4.14",
+      "data": "2026-11-10",
+      "novidades": [
+        "O conector se renova sozinho: depois de atualizar, o chat aberto passa a ver as ferramentas novas em poucos segundos, sem abrir outra conversa",
+        "Se o conector cair, ele volta sozinho e pede para repetir o pedido"
+      ]
+    },
+    {
+      "versao": "0.4.13",
+      "data": "2026-11-10",
+      "novidades": [
+        "Janela dos portais de chamados alinhada e mais clara"
+      ]
+    },
+    {
+      "versao": "0.4.12",
+      "data": "2026-11-10",
+      "novidades": [
+        "O Claude consulta a base de conhecimento e o histórico de chamados (Invent e Skill) sempre que o assunto envolve um add-on, e cita o que achou"
+      ]
+    },
+    {
+      "versao": "0.4.11",
+      "data": "2026-11-10",
+      "novidades": [
+        "O Claude passa a consultar SEMPRE a base de conhecimento e o histórico de chamados (Invent e Skill) antes de qualquer análise, e cita o que achou"
+      ]
+    },
+    {
+      "versao": "0.4.10",
+      "data": "2026-11-10",
+      "novidades": [
+        "Portais de chamados: login com o código de 6 dígitos do autenticador e você fica logado também no chat",
+        "Testar login já salva o e-mail e a senha",
+        "Quando a sessão do portal encerrar, o Claude pede um código novo no chat",
+        "Pastas por cliente: botão direito na base para mover ou criar pasta, e na pasta para renomear"
+      ]
+    }
+  ],
+  "arquivo": "pacote-0.4.40.json",
+  "tamanho": 1147320,
+  "sha256": "1c72c9ad4a428043f6dd379ff152c5f29e404f34af5e812c699d45b37b6b7acd",
+  "dependencias": "aceaa6bd981139b46f7dbb84fd0ca7bf17f2d1294bd1504e1c1ba9c5644e84c3",
+  "commit": "109bbf5",
+  "assinatura": "gfmLEpSskgNbxn/oyzdkvvIviDHJmLIAfOF+cNlAB7N0NRemPjiFnpIUXPvOhTgGlWHqjfu9HXRqXMTniZp/Ag=="
+}
