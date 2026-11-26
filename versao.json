@@ -1,0 +1,312 @@
+{
+  "produto": "SPS MCP Consultor",
+  "versao": "0.4.193",
+  "data": "2026-11-26",
+  "novidades": [
+    "Agrupador do servidor sempre pelo tipo: trocar o Ambiente muda para PRODUÇÃO ou QA na hora",
+    "ao salvar, nomes antigos do servidor viram PRODUÇÃO ou QA (o segundo do mesmo tipo vira QA 2). Abra cada servidor, confira o Ambiente e clique em Salvar"
+  ],
+  "historico": [
+    {
+      "versao": "0.4.192",
+      "data": "2026-11-26",
+      "novidades": [
+        "VPN no cadastro do servidor: VPN da SPS ou VPN do cliente (com VPN do cliente, o Claude nunca liga a da SPS e pede para você conectar a do cliente)",
+        "Testar tudo mais claro: se a Service Layer está no ar mas o usuário não entra numa base, aparece AVISO amarelo (pode salvar), não erro",
+        "Endereço do ASTER sempre preenchido no cadastro",
+        "E-mail com formatação (negrito, títulos, tabelas, régua, destaque, link) e assunto no padrão [CLIENTE] - assunto"
+      ]
+    },
+    {
+      "versao": "0.4.191",
+      "data": "2026-11-25",
+      "novidades": [
+        "Cadastro do servidor corrigido: o nome (agrupador) de um servidor que já existe nunca muda sozinho",
+        "Servidores sempre na ordem: Produção primeiro, depois QA",
+        "Seletor do Ambiente: Produção ou QA. Se o seu servidor mudou de nome na versão anterior, abra o cadastro e salve com o nome certo"
+      ]
+    },
+    {
+      "versao": "0.4.190",
+      "data": "2026-11-25",
+      "novidades": [
+        "Painel de servidores mais rápido e bonito: papel de parede, menu agrupado, botão Print e aviso de servidor cheio",
+        "Cadastro do servidor mais simples: só Ambiente (Produção ou QA)",
+        "Cartões de confirmação novos, com prévia completa antes de enviar e-mail ou chamado",
+        "Consultas mais seguras: sempre pelo banco e com limite de 60 segundos",
+        "E-mail pelo Outlook com assinatura, print no texto e anexos",
+        "Support User com o nome das empresas no SLD novo",
+        "ASTER: leitura dos assistentes e integrações e consulta só de leitura",
+        "Clicar e arrastar no servidor de teste, desligado por padrão (liga no cadastro, em Cliques da IA)"
+      ]
+    },
+    {
+      "versao": "0.4.141",
+      "data": "2026-11-19",
+      "novidades": [
+        "Lista de clientes: clicar no titulo do servidor (QA, PRODUCAO...) abre o cadastro desse servidor",
+        "Area de servidores: avisos no visual do programa e anel do conectando mais fluido"
+      ]
+    },
+    {
+      "versao": "0.4.140",
+      "data": "2026-11-19",
+      "novidades": [
+        "Abertura: se uma copia antiga ficou travada (clicava no atalho e nada abria), o programa encerra a travada e abre",
+        "Avisos e perguntas no visual do programa",
+        "Ctrl+S pergunta antes de salvar (Enter = Sim)",
+        "Botoes com efeito ao passar o mouse",
+        "Botao Print na barra do servidor (recorte de tela do seu Windows sem sair da sessao)",
+        "Service Layer recusada: o teste avisa quando o usuario do SAP esta bloqueado na empresa",
+        "Borda dos campos em janela larga e Salvar mostrando a etapa"
+      ]
+    },
+    {
+      "versao": "0.4.139",
+      "data": "2026-11-19",
+      "novidades": [
+        "Service Layer e SLD achados sozinhos em mais clientes (inclusive SAP 9.3 e nomes que o computador nao resolve: o conector pergunta ao banco do cliente)",
+        "Lista de clientes: pastas com desenho novo e o nome do servidor acima dos acessos remotos",
+        "Campos: o cursor comeca alinhado com a dica",
+        "Ctrl+S salva mostrando o aviso Processando",
+        "Limites maiores de bases e servidores por cliente"
+      ]
+    },
+    {
+      "versao": "0.4.138",
+      "data": "2026-11-19",
+      "novidades": [
+        "Service Layer com nome fora do DNS: o conector pergunta ao banco do próprio cliente de qual IP essa máquina está conectada (vale no chat também)",
+        "Teclado: Ctrl+S salva (cadastro, Integrações, Administração e janelas) e Enter aciona o botão principal das janelas",
+        "A roda do mouse em cima de uma lista aberta rola a lista, não a página"
+      ]
+    },
+    {
+      "versao": "0.4.137",
+      "data": "2026-11-19",
+      "novidades": [
+        "Service Layer com nome que não existe no DNS (ex.: connectsl): no Testar tudo o conector procura nos endereços vizinhos dos servidores do cadastro e só guarda o endereço depois que o login com a empresa do cliente passa",
+        "no chat ele usa o endereço já provado"
+      ]
+    },
+    {
+      "versao": "0.4.136",
+      "data": "2026-11-19",
+      "novidades": [
+        "ASTER, só leitura: o chat passa a ler relatórios, páginas do usuário e recursos, com filtro nas listas",
+        "Acesso remoto: a sessão já nasce do tamanho da tela e o primeiro login não cai mais",
+        "A bolinha do servidor fica verde quando conecta",
+        "Ao abrir um servidor aparece a logo com um anel girando",
+        "Lista de clientes: acessos remotos agrupados por servidor do cliente",
+        "Textos revistos"
+      ]
+    },
+    {
+      "versao": "0.4.135",
+      "data": "2026-11-19",
+      "novidades": [
+        "Service Layer cadastrada por nome curto que o computador não acha passa a responder (o conector acha o IP sozinho, uma por uma quando há várias)",
+        "SLD sem endereço no cadastro: o conector acha sozinho a máquina do SLD (a da Service Layer ou a do banco) e troca IP pelo nome da máquina",
+        "ASTER: base que usa outro usuário do ASTER continua com o login dela",
+        "Acesso remoto: o primeiro login não cai mais com a sessão foi encerrada"
+      ]
+    },
+    {
+      "versao": "0.4.134",
+      "data": "2026-11-19",
+      "novidades": [
+        "Buscas bem mais rápidas (login no SLD em menos de 1 segundo",
+        "Service Layers e TS em poucos segundos), sem aumentar a carga no banco do cliente",
+        "Buscar tudo do servidor procura os TS sempre e só acrescenta os que faltam",
+        "Buscar TS não deixa mais servidor de fora por demora na resposta"
+      ]
+    },
+    {
+      "versao": "0.4.133",
+      "data": "2026-11-19",
+      "novidades": [
+        "As opções de gravar pela Service Layer (POST, PATCH, DELETE, reiniciar) não somem mais ao salvar quando a primeira base do servidor é a de produção",
+        "ASTER: a lista de telas (applications) voltou a funcionar e aceita filtro",
+        "ASTER: consultas grandes (company_queries) não derrubam mais a conexão, vêm só da empresa da conexão e aceitam filtro",
+        "ASTER de produção pode ser lido",
+        "Empresa do ASTER com Produção no nome já vem marcada como produção"
+      ]
+    },
+    {
+      "versao": "0.4.132",
+      "data": "2026-11-19",
+      "novidades": [
+        "Login no SLD (Control Center) que usa o servidor de autenticação do SAP: agora entra com qualquer usuário cadastrado no SLD, como o navegador",
+        "No configurador, o teste do SLD não espera mais 30 minutos depois de uma recusa (para só depois de três recusas seguidas com a mesma senha)",
+        "Testar tudo tenta o login do SAP em até duas Service Layers"
+      ]
+    },
+    {
+      "versao": "0.4.131",
+      "data": "2026-11-19",
+      "novidades": [
+        "Login no SLD (Control Center) com qualquer usuário cadastrado nele, não só o B1SiteUser (antes era recusado com a senha certa)",
+        "Testar tudo tenta o login do SAP em até duas Service Layers antes de parar"
+      ]
+    },
+    {
+      "versao": "0.4.130",
+      "data": "2026-11-19",
+      "novidades": [
+        "ASTER no cadastro do cliente: um campo por empresa (lista + produção ou homologação) e o botão Adicionar empresa",
+        "Testar tudo usa o mesmo login do SLD (Control Center) que o botão Entrar no SLD e buscar",
+        "Testar tudo não repete nas outras Service Layers um login do SAP que a primeira recusou (evita bloquear o usuário)",
+        "Login recusado na Service Layer mostra com qual usuário e empresa o teste entrou"
+      ]
+    },
+    {
+      "versao": "0.4.129",
+      "data": "2026-11-19",
+      "novidades": [
+        "O endereço do SLD (Control Center) é preenchido pela busca também quando esta máquina não acha o servidor pelo nome curto",
+        "ASTER: login geral na aba Integrações",
+        "ASTER: várias empresas por cliente (marque as do cliente no cadastro), cada uma como produção ou homologação",
+        "com mais de uma, o chat pergunta qual usar"
+      ]
+    },
+    {
+      "versao": "0.4.128",
+      "data": "2026-11-19",
+      "novidades": [
+        "E-mail pelo Outlook deste computador: buscar, ler e enviar com cartão de confirmação, sem senha. Nasce desligado: ligue na aba Integrações, cartão Outlook",
+        "Support User e reinício da Service Layer em base de PRODUÇÃO: caixas próprias no cadastro (Service Layer), desmarcadas por padrão, sempre com cartão de aviso",
+        "Zoom da tela do servidor (100 a 175%) no botão direito do acesso",
+        "Sessão remota mais leve",
+        "Depois de atualizar, o configurador reabre sozinho na versão nova"
+      ]
+    },
+    {
+      "versao": "0.4.127",
+      "data": "2026-11-19",
+      "novidades": [
+        "Transferência de arquivos por copiar e colar no acesso remoto: liga por sessão, no botão direito do acesso",
+        "Abrir pasta do servidor (transferência rápida) no botão direito do acesso",
+        "A aba Chamados passa a se chamar Integrações",
+        "Sessão remota em servidor antigo não é mais fechada ao ajustar o tamanho da tela",
+        "A linha selecionada na lista acompanha o servidor que está na tela"
+      ]
+    },
+    {
+      "versao": "0.4.126",
+      "data": "2026-11-18",
+      "novidades": [
+        "Servidores: um clique mostra o que já está aberto e o clique duplo abre (conecta)",
+        "abrir de novo um GO-Global que já está aberto traz a janela dele para a frente, em vez de abrir outra",
+        "O resultado do Buscar tudo mostra também o endereço do SLD"
+      ]
+    },
+    {
+      "versao": "0.4.125",
+      "data": "2026-11-18",
+      "novidades": [
+        "O botão de busca virou Buscar tudo do servidor e foi para o cartão Banco de dados: de uma vez busca as bases, os acessos remotos (TS) e a Service Layer com o Controller e o SLD, e diz o que fez com cada parte (só preenche o que está vazio)",
+        "Salvar: quando não salva, abre um aviso NÃO FOI SALVO com o motivo (antes o motivo só aparecia no rodapé e parecia que tinha salvado)",
+        "Buscar TS só testa as máquinas da rede do servidor"
+      ]
+    },
+    {
+      "versao": "0.4.124",
+      "data": "2026-11-18",
+      "novidades": [
+        "Botão Buscar TS do servidor: lê no registro de acessos do SAP as máquinas de onde o SAP foi aberto, testa a área de trabalho remota das que ficam na rede do servidor e põe na lista as que respondem (só leitura, sem varrer a rede)",
+        "Buscar bases do servidor agora preenche também o cartão da Service Layer: endereços, Controller e SLD lidos no banco, faltando só os usuários e as senhas",
+        "Servidor cadastrado pelo nome curto que a rede não acha (erro ENOTFOUND): o conector descobre o IP sozinho e conecta mantendo o nome",
+        "Login recusado no SLD agora trava novas tentativas por 30 minutos, para não bloquear o usuário",
+        "A busca do SLD preenche o endereço do SLD e o nome da máquina do Controller quando vêm vazios"
+      ]
+    },
+    {
+      "versao": "0.4.123",
+      "data": "2026-11-18",
+      "novidades": [
+        "Quem está na versão 0.4.40 agora atualiza direto pelo botão Atualizar versão, sem precisar do INSTALAR.cmd (saíram duas bibliotecas que nenhuma função usava)",
+        "Cadastro novo, por cliente e por servidor (QA, Produção), com as bases de cada servidor numa lista",
+        "Botão Entrar no SLD e buscar: com o usuário e a senha do Controller, preenche sozinho as Service Layers e o nome da máquina do Controller (SAP HANA e SQL Server)",
+        "Botão Buscar bases do servidor: lista as empresas do SAP e as bases de add-on, uma por campo, cada uma com o seu tipo",
+        "Abas com nome no topo, abertura mais rápida, servidores do cliente dentro do configurador e VPN da SPS",
+        "Quando uma versão futura trouxer bibliotecas novas, o botão instala sozinho"
+      ]
+    },
+    {
+      "versao": "0.4.122",
+      "data": "2026-11-18",
+      "novidades": [
+        "O botão Atualizar versão agora instala sozinho as dependências novas antes de trocar o código, sem precisar do INSTALAR.cmd. Se a instalação falhar, nada é trocado e a tela diz o motivo"
+      ]
+    },
+    {
+      "versao": "0.4.121",
+      "data": "2026-11-18",
+      "novidades": [
+        "Cadastro novo, por cliente e por servidor (QA, Produção), com as bases de cada servidor numa lista",
+        "Botão Entrar no SLD e buscar: com o usuário e a senha do Controller, preenche sozinho as Service Layers e o nome da máquina do Controller (SAP HANA e SQL Server). O endereço do SLD pode ser digitado sem a porta",
+        "Botão Buscar bases do servidor: lista as empresas do SAP e as bases de add-on, uma por campo, cada uma com o seu tipo (teste, produção, add-on)",
+        "Abas com nome no topo (Clientes, Servidores, Chamados) e abertura do configurador bem mais rápida",
+        "Servidores do cliente (área de trabalho remota e GO-Global) dentro do configurador",
+        "VPN da SPS pelo configurador, com o selo mostrando se está ligada",
+        "Nesta versão, comandos e cliques da IA dentro dos servidores ficam desligados",
+        "Esta versão traz dependências novas: a atualização é pelo INSTALAR.cmd do pacote novo (o cadastro é mantido)"
+      ]
+    },
+    {
+      "versao": "0.4.40",
+      "data": "2026-11-13",
+      "novidades": [
+        "Responder chamado corrigido: a resposta agora vai pela chamada certa do portal (o envio anterior voltava HTTP 404 e nada era publicado)"
+      ]
+    },
+    {
+      "versao": "0.4.39",
+      "data": "2026-11-13",
+      "novidades": [
+        "Novo: responder chamado existente na Invent e na Skill pelo chat (chamado_responder), com texto e anexos colados no chat ou arquivos e pastas do computador",
+        "sempre com a prévia e o seu sim, e confere no portal se a resposta chegou"
+      ]
+    },
+    {
+      "versao": "0.4.38",
+      "data": "2026-11-13",
+      "novidades": [
+        "Sessão dos portais (Invent, Skill) cai menos: com a sessão do configurador ou de outro chat aberta, o chat usa essa em vez de pedir o código de novo",
+        "Enquanto o chat está aberto, a sessão é mantida viva (o portal derrubava depois de um tempo parado)"
+      ]
+    },
+    {
+      "versao": "0.4.37",
+      "data": "2026-11-13",
+      "novidades": [
+        "Buscar todas as Service Layers pelo banco: com só o servidor do banco preenchido, o botão lê no banco as Service Layers cadastradas no SLD, o Controller de cada uma e acha o endereço do SLD, sem login",
+        "Controller no SQL Server (porta 40005, na máquina da Service Layer) funciona",
+        "Campo Endereço do SLD",
+        "Corrigido: testar ou salvar apagava o campo Controller de cada linha"
+      ]
+    },
+    {
+      "versao": "0.4.36",
+      "data": "2026-11-13",
+      "novidades": [
+        "Controller/SLD em outra máquina que a da Service Layer (caso da ISQ): o nome digitado na linha da Service Layer é usado direto quando a rede o conhece",
+        "Mensagem de erro aponta o campo certo (Controller, na linha da Service Layer)"
+      ]
+    },
+    {
+      "versao": "0.4.35",
+      "data": "2026-11-13",
+      "novidades": [
+        "Configurador abre com as pastas fechadas",
+        "a pasta que você abriu continua aberta ao salvar, e a da base salva abre sozinha"
+      ]
+    }
+  ],
+  "arquivo": "pacote-0.4.193.json",
+  "tamanho": 1987435,
+  "sha256": "92fb5d90053f6d6890defb225e13e6a7caed0e129a4a829f1a604910209d7958",
+  "dependencias": "aceaa6bd981139b46f7dbb84fd0ca7bf17f2d1294bd1504e1c1ba9c5644e84c3",
+  "commit": "b56c857",
+  "assinatura": "IhIBe/9Iv/GO2lhXlMBroWlCqSF9uVeT/XW+sqAshI4qjLtxcHsa6KR8dFbz4uYyryKUU0d3pY/G06XfztBXCg=="
+}
